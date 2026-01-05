@@ -8,6 +8,21 @@
     <title>Eertmans.com</title>
     
     <link rel="icon" href="images/favicon.png" />
+
+    <style>
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }  
+    .quote {
+        text-align: center;
+        max-width: 600px;
+        padding: 2rem;
+        border: 1px solid #ddd;
+    }
+    </style>
   </head>
 
   <body>
@@ -38,7 +53,6 @@ function displayRandomQuote() {
 
 displayRandomQuote();
 
-document.getElementById('new-quote').addEventListener('click', displayRandomQuote);
   </script>
     
   </body>
