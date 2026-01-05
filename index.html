@@ -1,1 +1,47 @@
-Cloudflare Pages?!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eertmans.com</title>
+    
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+
+  <body>
+
+  <script>
+    const quotes = [
+    { text: "It’s not a bug – it’s an undocumented feature.", author: "Anonymous" },
+    { text: "Have you tried turning it off and on again?", author: "The IT Crowd" },
+    { text: "First, solve the problem. Then, write the code.", author: "John Johnson" },
+    { text: "There's no place like 127.0.0.1.", author: "Network Proverb" },
+    { text: "A user interface is like a joke. If you have to explain it, it’s not that good.", author: "Martin LeBlanc" },
+    { text: "Hardware: The parts of a computer system that can be kicked.", author: "Jeff Pesis" },
+    { text: "I think there is a world market for maybe five computers.", author: "Thomas Watson (1943)" },
+    { text: "There is no 'Cloud.' It's just someone else's computer.", author: "Industry Proverb" },
+    { text: "Measuring programming progress by lines of code is like measuring aircraft building progress by weight.", author: "Bill Gates" },
+    { text: "A programmer is a machine that turns caffeine into code.", author: "Programmer's Creed" }
+];
+
+function displayRandomQuote() {
+    // 1. Pick a random index based on the array length
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const selectedQuote = quotes[randomIndex];
+
+    // 2. Target the elements and update their content
+    document.getElementById('quote-text').innerText = `"${selectedQuote.text}"`;
+    document.getElementById('quote-author').innerText = `— ${selectedQuote.author}`;
+}
+
+// Run once on page load
+displayRandomQuote();
+
+// Run when the button is clicked
+document.getElementById('new-quote').addEventListener('click', displayRandomQuote);
+  </script>
+    
+  </body>
+</html>
