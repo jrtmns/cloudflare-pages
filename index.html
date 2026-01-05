@@ -11,7 +11,10 @@
   </head>
 
   <body>
-
+  <div class="quote">
+    <div class="quote__text"></div>
+    <div class="quote__author"></div>
+  </div>
   <script>
     const quotes = [
     { text: "It’s not a bug – it’s an undocumented feature.", author: "Anonymous" },
@@ -27,19 +30,14 @@
 ];
 
 function displayRandomQuote() {
-    // 1. Pick a random index based on the array length
     const randomIndex = Math.floor(Math.random() * quotes.length);
     const selectedQuote = quotes[randomIndex];
-
-    // 2. Target the elements and update their content
-    document.getElementById('quote-text').innerText = `"${selectedQuote.text}"`;
-    document.getElementById('quote-author').innerText = `— ${selectedQuote.author}`;
+    document.querySelector('.quote__text').innerText = `"${selectedQuote.text}"`;
+    document.querySelector('.quote__author').innerText = `— ${selectedQuote.author}`;
 }
 
-// Run once on page load
 displayRandomQuote();
 
-// Run when the button is clicked
 document.getElementById('new-quote').addEventListener('click', displayRandomQuote);
   </script>
     
